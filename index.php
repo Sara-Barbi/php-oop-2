@@ -8,10 +8,6 @@ $sale = [
 
 ];
 
-$saleImmersive = [
-
-];
-
 $spettacoli = [
 
 ];
