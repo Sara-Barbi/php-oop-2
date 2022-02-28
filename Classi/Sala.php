@@ -2,14 +2,12 @@
 class Sala{
     protected $numero;
     protected $posti;
-    protected $file;
     protected $addetto;
     protected $schermo;
     
-    public function __costruct($_numero, $_posti, $_file){
+    public function __costruct($_numero, $_posti, $_schermo){
         $this->numero = $_numero;
         $this->posti = $_posti;
-        $this->file = $_file;
         $this->schermo = $_schermo;
     }
 }

@@ -1,14 +1,12 @@
 <?php
 class Spettacolo{
-    protected $titolo;
+    protected $numero;
+    protected $ora;
     protected $durata;
-    protected $protagonista;
-    protected $tipologia;
     
-    public function __costruct($_numero, $_posti, $_file){
-        $this->titolo = $_numero;
-        $this->durata = $_posti;
-        $this->protagonista = $_protagonista;
-        $this->tipologia = $_schermo;
+    public function __costruct($_numero, $_ora, $_durata){
+        $this->numero = $_numero;
+        $this->ora = $_ora;
+        $this->durata = $_durata;
     }
 }

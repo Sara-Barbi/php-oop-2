@@ -1,14 +1,12 @@
 <?php
 class Film{
     protected $titolo;
-    protected $durata;
     protected $protagonista;
     protected $tipologia;
     
-    public function __costruct($_numero, $_posti, $_file){
-        $this->titolo = $_numero;
-        $this->durata = $_posti;
+    public function __costruct($_titolo, $protagonista, $_tipologia){
+        $this->titolo = $_titolo;
         $this->protagonista = $_protagonista;
-        $this->tipologia = $_schermo;
+        $this->tipologia = $_tipologia;
     }
 }
