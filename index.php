@@ -9,11 +9,11 @@ require_once __DIR__ . './Classi/Film.php';
 require_once __DIR__ . './Classi/Spettacolo.php';
 
 $sale = [
-    new Sala ("Sala 1"," 310 persone", "Schermo 400mq" ),
-    new Sala ("Sala 2", "300 persone"," Schermo 410mq" ),
-    new Sala ("Sala 3", "450 persone", "Schermo 420mq" ),
-    new SalaImmersiva ("Sala 4", "310 persone","Schermo 400mq" ,false,true,true,false ),
-    new SalaImmersiva ("Sala 5", "310 persone", "Schermo 410mq",true,false,true,true),   
+    new Sala ("Sala 1", 320, "Schermo 400mq" ),
+    new Sala ("Sala 2",300 ," Schermo 410mq" ),
+    new Sala ("Sala 3",350 , "Schermo 420mq" ),
+    new SalaImmersiva ("Sala 4", 370,"Schermo 400mq" ,false,true,true,false ),
+    new SalaImmersiva ("Sala 5", 350, "Schermo 410mq",true,false,true,true),   
 ];
 
 $opera = [
@@ -36,11 +36,15 @@ $spettacoli = [
     new Spettacolo ($opera[5],"Spettacolo n. 9", "15.00", "142 min", $sale[1]),
     new Spettacolo ($opera[3],"Spettacolo n. 10", "17.00", "130 min", $sale[2]),
 ];
-var_dump($spettacoli);
 
+// 1 -> Recupera l’elenco delle sale con relative informazioni, facendo particolare attenzione alle informazioni aggiuntive per le sale immersive.
+var_dump($sale);
 
-
-
+// 2 -> Recuperare la capienza totale del cinema considerando tutte le sale a disposizione.
+$sum=0;
+    foreach($sale as $key => $element){
+        return $sum += $element -> getPosti();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +57,7 @@ var_dump($spettacoli);
     <title>Document</title>
 </head>
 <body>
-
+    <h6></h6>
     
 </body>
 </html>

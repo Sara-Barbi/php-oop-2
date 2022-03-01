@@ -13,5 +13,7 @@ class Sala{
     public function getInfoSala(){
         return "{$this->numero}<br>"."{$this->posti}<br>"."{$this->schermo}<br>"."{$this->id}";
     }
-
+    public function getPosti(){
+        return $this->posti;
+    }
 }

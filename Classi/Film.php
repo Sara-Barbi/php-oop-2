@@ -13,6 +13,8 @@ class Film{
     public function getInfoFilm(){
         return "{$this->titolo}<br>"."{$this->protagonista}<br>"."{$this->toipologia}<br>"."{$this->id}";
     }
+
+
 }
 
     
