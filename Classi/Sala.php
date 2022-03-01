@@ -9,7 +9,6 @@ class Sala{
         $this->numero = $_numero;
         $this->posti = $_posti;
         $this->schermo = $_schermo;
-        $this->addetto = $_addetto;
     }
     public function getInfoSala(){
         return "{$this->numero}<br>"."{$this->posti}<br>"."{$this->schermo}<br>"."{$this->id}";

@@ -8,7 +8,7 @@ class Spettacolo{
 
     
     public function __construct($_film, $_numero, $_ora, $_durata, $_sala){
-        $this->film->$_film;
+        $this->film=$_film;
         $this->numero = $_numero;
         $this->ora = $_ora;
         $this->durata = $_durata;

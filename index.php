@@ -1,8 +1,12 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
 require_once __DIR__ . './Classi/Sala.php';
 require_once __DIR__ . './Classi/SalaImmersiva.php';
-require_once __DIR__ . './Classi/Spettacolo.php';
 require_once __DIR__ . './Classi/Film.php';
+require_once __DIR__ . './Classi/Spettacolo.php';
 
 $sale = [
     new Sala ("Sala 1"," 310 persone", "Schermo 400mq" ),
@@ -15,15 +19,6 @@ $sale = [
    
 ];
 
-$spettacoli = [
-    new Spettacolo ($opera[1],"Spettacolo n. 3", "20.00", "112 min", $sale[1]),
-    new Spettacolo ($opera[2],"Spettacolo n. 5", "10.00", "122 min", $sale[1]),
-    new Spettacolo ($opera[1],"Spettacolo n. 6", "15.00", "130 min", $sale[1]),
-    new Spettacolo ($opera[0],"Spettacolo n. 2", "18.00", "109 min", $sale[1]),
-    new Spettacolo ($opera[5],"Spettacolo n. 1", "9.00", "142 min", $sale[1]),
-    new Spettacolo ($opera[3],"Spettacolo n. 7", "17.00", "130 min", $sale[1]),
-];
-
 $opera = [
     new Film("The Lost Daughter","Olivia Colman ","Drammatico"),
     new Film(" The Power of the Dog" ,"Phil Burban", "Drammatico"),
@@ -33,7 +28,17 @@ $opera = [
     new Film(" Dunette" ,"Leyaska Polinova"," Avventura"),
 ];
 
-var_dump($spettacoli[1]);
+$spettacoli = [
+    new Spettacolo ($opera[1],"Spettacolo n. 3", "20.00", "112 min", $sale[1]),
+    new Spettacolo ($opera[2],"Spettacolo n. 5", "10.00", "122 min", $sale[1]),
+    new Spettacolo ($opera[1],"Spettacolo n. 6", "15.00", "130 min", $sale[1]),
+    new Spettacolo ($opera[0],"Spettacolo n. 2", "18.00", "109 min", $sale[1]),
+    new Spettacolo ($opera[5],"Spettacolo n. 1", "9.00", "142 min", $sale[1]),
+    new Spettacolo ($opera[3],"Spettacolo n. 7", "17.00", "130 min", $sale[1]),
+];
+var_dump($opera);
+
+
 
 
 ?>
