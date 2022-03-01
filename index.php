@@ -13,10 +13,7 @@ $sale = [
     new Sala ("Sala 2", "300 persone"," Schermo 410mq" ),
     new Sala ("Sala 3", "450 persone", "Schermo 420mq" ),
     new SalaImmersiva ("Sala 4", "310 persone","Schermo 400mq" ,false,true,true,false ),
-    new SalaImmersiva ("Sala 5", "310 persone", "Schermo 410mq",true,false,true,false),
-    new SalaImmersiva ("Sala 6", "300 persone","Schermo 400mq",true,true,true,true),
-
-   
+    new SalaImmersiva ("Sala 5", "310 persone", "Schermo 410mq",true,false,true,true),   
 ];
 
 $opera = [
@@ -30,13 +27,16 @@ $opera = [
 
 $spettacoli = [
     new Spettacolo ($opera[1],"Spettacolo n. 3", "20.00", "112 min", $sale[1]),
-    new Spettacolo ($opera[2],"Spettacolo n. 5", "10.00", "122 min", $sale[1]),
-    new Spettacolo ($opera[1],"Spettacolo n. 6", "15.00", "130 min", $sale[1]),
-    new Spettacolo ($opera[0],"Spettacolo n. 2", "18.00", "109 min", $sale[1]),
-    new Spettacolo ($opera[5],"Spettacolo n. 1", "9.00", "142 min", $sale[1]),
-    new Spettacolo ($opera[3],"Spettacolo n. 7", "17.00", "130 min", $sale[1]),
+    new Spettacolo ($opera[2],"Spettacolo n. 5", "10.00", "122 min", $sale[0]),
+    new Spettacolo ($opera[1],"Spettacolo n. 6", "15.00", "130 min", $sale[0]),
+    new Spettacolo ($opera[0],"Spettacolo n. 2", "18.00", "109 min", $sale[3]),
+    new Spettacolo ($opera[5],"Spettacolo n. 1", "9.00", "142 min", $sale[2]),
+    new Spettacolo ($opera[3],"Spettacolo n. 7", "17.00", "130 min", $sale[4]),
+    new Spettacolo ($opera[0],"Spettacolo n. 8", "10.00", "109 min", $sale[4]),
+    new Spettacolo ($opera[5],"Spettacolo n. 9", "15.00", "142 min", $sale[1]),
+    new Spettacolo ($opera[3],"Spettacolo n. 10", "17.00", "130 min", $sale[2]),
 ];
-var_dump($opera);
+var_dump($spettacoli);
 
 
 
