@@ -1,6 +1,6 @@
 <?php
 class Sala{
-    protected $numero;
+    private $numero;
     protected $posti;
     protected $schermo;
     protected $addetto;
@@ -10,6 +10,24 @@ class Sala{
         $this->posti = $_posti;
         $this->schermo = $_schermo;
         $this->addetto = $_addetto;
-
     }
+    public function setNumero($_numero){
+        $this -> numero = $_numero;
+    }
+    public function getNumero(){
+        return $this -> numero;
+    }
+
+    public function setPosti($_posti){
+        $this->posti = $_posti;   
+    }    
+    
+    public function setSchermo($_schermo){
+        $this->schermo = $_schermo;   
+    }   
+    
+    public function setAddetto($_addetto){
+        $this->addetto = $_addetto; 
+    }
+
 }

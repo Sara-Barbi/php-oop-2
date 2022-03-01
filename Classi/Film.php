@@ -9,4 +9,18 @@ class Film{
         $this->protagonista = $_protagonista;
         $this->tipologia = $_tipologia;
     }
+
+    public function setTitolo($_titolo){
+        $this->titolo = $_titolo;
+    }
+
+    public function setProtagonista($_protagonista){
+        $this->protagonista = $_protagonista;
+    }    
+    
+    public function setTipologia($_tipologia){
+        $this->tipologia = $_tipologia;
+    }   
 }
+
+    

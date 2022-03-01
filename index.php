@@ -35,3 +35,4 @@ $opere = [
    new Film(" Dunette" ,"Leyaska Polinova"," Avventura"),
 ];
 
+var_dump($sale);
