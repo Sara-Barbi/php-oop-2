@@ -1,6 +1,10 @@
 <?php
 class SalaImmersiva extends Sala{
-    use Effetti;
+    protected $fumo;
+    protected $vapore;
+    protected $acqua;
+    protected $scosse;
+
 
     public function __costruct($_numero, $_posti,$_schermo, $_fumo = false, $_vapore = false, $_acqua = false, $_scosse = false){
         parent::__construct($_numero, $_posti,$_schermo);        //per evitare di scrivere :
