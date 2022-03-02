@@ -45,6 +45,7 @@ $sum=0;
     foreach($sale as $key => $element){
         $sum += $element -> getPosti();
     }
+var_dump($sum);
 
 //Stabilito un giorno e un film, recuperare quante proiezioni totali di quel film ci saranno.
 $count = 0;
