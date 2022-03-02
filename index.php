@@ -26,15 +26,15 @@ $opera = [
 ];
 
 $spettacoli = [
-    new Spettacolo ($opera[1],"Spettacolo n. 3", "20.00", "112 min", $sale[1]),
-    new Spettacolo ($opera[2],"Spettacolo n. 5", "10.00", "122 min", $sale[0]),
-    new Spettacolo ($opera[1],"Spettacolo n. 6", "15.00", "130 min", $sale[0]),
-    new Spettacolo ($opera[0],"Spettacolo n. 2", "18.00", "109 min", $sale[3]),
-    new Spettacolo ($opera[5],"Spettacolo n. 1", "9.00", "142 min", $sale[2]),
-    new Spettacolo ($opera[3],"Spettacolo n. 7", "17.00", "130 min", $sale[4]),
-    new Spettacolo ($opera[0],"Spettacolo n. 8", "10.00", "109 min", $sale[4]),
-    new Spettacolo ($opera[5],"Spettacolo n. 9", "15.00", "142 min", $sale[1]),
-    new Spettacolo ($opera[3],"Spettacolo n. 10", "17.00", "130 min", $sale[2]),
+    new Spettacolo ($opera[1],"03/03/2021", "20.00", "112 min", $sale[1]),
+    new Spettacolo ($opera[2],"05/03/2021", "10.00", "122 min", $sale[0]),
+    new Spettacolo ($opera[1],"03/03/2021", "15.00", "130 min", $sale[0]),
+    new Spettacolo ($opera[0],"02/06/2021", "18.00", "109 min", $sale[3]),
+    new Spettacolo ($opera[5],"01/06/2021", "9.00", "142 min", $sale[2]),
+    new Spettacolo ($opera[3],"07/06/2021", "17.00", "130 min", $sale[4]),
+    new Spettacolo ($opera[0],"08/07/2021", "10.00", "109 min", $sale[4]),
+    new Spettacolo ($opera[5],"09/08/2021", "15.00", "142 min", $sale[1]),
+    new Spettacolo ($opera[3],"01/09/2021", "17.00", "130 min", $sale[2]),
 ];
 
 // 1 -> Recupera l’elenco delle sale con relative informazioni, facendo particolare attenzione alle informazioni aggiuntive per le sale immersive.
@@ -43,8 +43,21 @@ var_dump($sale);
 // 2 -> Recuperare la capienza totale del cinema considerando tutte le sale a disposizione.
 $sum=0;
     foreach($sale as $key => $element){
-        return $sum += $element -> getPosti();
+        $sum += $element -> getPosti();
     }
+
+//Stabilito un giorno e un film, recuperare quante proiezioni totali di quel film ci saranno.
+$count = 0;
+$today = "03/03/2021";
+$movie = $opera[1];
+
+foreach($spettacoli as $key => $spettacolo){
+    if(($today==$spettacolo->getData()) && ($movie==$spettacolo->getFilm())){
+        $count++;
+    }
+}
+var_dump($count);
+
 ?>
 
 <!DOCTYPE html>
